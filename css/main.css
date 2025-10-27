@@ -624,3 +624,85 @@ body{
   width: 100%;
   height: 100%;
 }
+
+
+
+/* -------------------------
+   MOBILE OPTIMIZATION
+   ------------------------- */
+@media (max-width: 768px) {
+  /* Navigation */
+  .signal-nav {
+    padding: 0 1.5em;
+    height: 60px;
+  }
+
+  /* Hero text */
+  .hero__content {
+    gap: 20px;
+    padding: 60px 20px;
+  }
+
+  .brand__title {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  .brand__tagline {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Purpose section */
+  .purpose__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .purpose__visual {
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+  }
+
+  /* System section */
+  .system__pipeline {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .step {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Reach section */
+  #reach {
+    height: 400px;
+  }
+
+  /* CTA */
+  .section--cta {
+    padding: 60px 20px;
+  }
+
+  .section--cta h2 {
+    font-size: 1.4rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-contact {
+    margin-bottom: 30px;
+  }
+
+  .socials a {
+    font-size: 1.2rem;
+  }
+}
