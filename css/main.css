@@ -657,13 +657,23 @@ body{
   .purpose__inner {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    gap: 12px; /* reduce gap between text and SVG */
+  }
+
+  .purpose__text {
+    margin-bottom: 0; /* remove default bottom margin */
   }
 
   .purpose__visual {
-    width: 180px;
-    height: 180px;
-    margin-top: 20px;
+    margin-top: 0; /* remove extra spacing above visual */
   }
+
+  .purpose__visual svg {
+    width: 160px;
+    height: 160px;
+  }
+
 
   /* System section */
   .system__pipeline {
