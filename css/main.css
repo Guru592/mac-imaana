@@ -656,14 +656,16 @@ body{
   /* Purpose section */
   /* Purpose section (mobile view) */
 .purpose__inner {
-  flex-direction: row;            /* make it horizontal */
+  flex-direction: row;            
   align-items: center;
   justify-content: space-between;
   text-align: left;
-  gap: 8px;                       /* smaller horizontal spacing */
+  gap: 16px;                      /* give breathing room between text and SVG */
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0 8px;                 /* slight side padding */
 }
+
 
 .purpose__text {
   flex: 1;                        /* let text take more space */
@@ -671,14 +673,15 @@ body{
 }
 
 .purpose__text h2 {
-  margin-bottom: 4px;
-  font-size: 1.1rem;              /* optional: scale heading down slightly */
+  margin-bottom: 6px;
+  font-size: 1.4rem;              /* larger heading */
+  line-height: 1.2;
 }
 
 .purpose__text p {
   margin-bottom: 0;
-  font-size: 0.95rem;             /* optional: scale paragraph down */
-  line-height: 1.4;
+  font-size: 1rem;             /* optional: scale paragraph down */
+  line-height: 1.5;
 }
 
 .purpose__visual {
@@ -687,8 +690,8 @@ body{
 }
 
 .purpose__visual svg {
-  width: 48px;
-  height: 48px;
+  width: 90px;
+  height: 90px;
 }
 
 
