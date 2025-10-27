@@ -617,3 +617,67 @@ body {
     gap: 20px;
   }
 }
+/* ======================================================
+   ✅ FINAL MOBILE + NAVBAR STABILITY FIXES
+   ====================================================== */
+html, body {
+  overflow-x: hidden !important;
+}
+
+/* Prevent any element from overflowing horizontally */
+body * {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* Mobile navbar stability + hamburger alignment */
+@media (max-width: 768px) {
+  /* Lock horizontal overflow */
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  /* Keep navbar anchored and smooth */
+  .signal-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 1.5em;
+    height: 60px;
+    background: rgba(15, 18, 25, 0.5);
+    transform: translateZ(0);
+    will-change: transform;
+    justify-content: space-between;
+  }
+
+  /* Place hamburger inside nav flow */
+  .hamburger {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-left: auto;
+  }
+
+  /* Ensure overlay fills screen perfectly */
+  .menu-overlay {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+  }
+
+  /* Keep hero + form constrained to viewport */
+  .contact-hero,
+  .contact-form,
+  .contact-footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Optional: prevent scrollbar jump when menu opens */
+body.menu-open {
+  overflow: hidden;
+}
