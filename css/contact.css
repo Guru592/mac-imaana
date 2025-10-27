@@ -644,3 +644,24 @@ body {
     gap: 20px;
   }
 }
+/* --- Navbar Mobile Drift Fix --- */
+@supports (-webkit-touch-callout: none) {
+  body {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .signal-nav {
+    position: sticky; /* stays in place but scrolls naturally */
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0); /* fixes GPU shift */
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .hamburger {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+  }
+}
