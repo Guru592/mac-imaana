@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mac Imaana — Media Intelligence</title>
+  <meta name="description" content="Mac Imaana — media monitoring & insights. From the watchtower, we see what others miss." />
+
+  <!-- Google Font (replace if you prefer) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/main.css" />
+
+ 
+
+</head>
+<body>
+
+   <!-- ===== NAVBAR: The Signal Bar ===== -->
+<nav class="signal-nav">
+  <div class="nav-left">
+    <div class="signal-dot"></div>
+    <a href="index.html" class="brand">Mac Imaana</a>
+  </div>
+  
+</nav>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- ===== Full-Screen Overlay Menu ===== -->
+<div class="menu-overlay" id="menu-overlay">
+  <div class="menu-content">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.macimaanasolution.co.ke/database" target="_blank">Access Portal</a>
+  </div>
+</div>
+
+  <!-- SITE WRAPPER -->
+  <div id="site">
+
+    <!-- HERO: The Horizon of Signals -->
+    <header class="hero" id="hero">
+      <!-- Background video (placeholder path) -->
+      <video class="hero__video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+        <source src="assets/hero 4.mp4" type="video/mp4" />
+        <!-- Fallback: silent background animation / image will be used via CSS -->
+      </video>
+
+      
+
+      <!-- Foreground content -->
+      <div class="hero__content">
+        <div class="brand">
+          <h1 class="brand__title">MAC IMAANA</h1>
+          <p class="brand__tagline">The eyes and ears of media intelligence.</p>
+        </div>
+
+        <div class="hero__cta">
+          <a href="#purpose" class="btn btn--primary" id="seePatterns">See the Patterns</a>
+        </div>
+
+        <!-- subtle radar sweep mask -->
+        <div class="radar" aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <!-- PURPOSE SECTION -->
+    <section id="purpose" class="section section--purpose">
+      <div class="container">
+        <div class="purpose__inner">
+          <div class="purpose__text">
+            <h2>Why we watch</h2>
+            <p>In a world that speaks endlessly, we focus on what matters. We monitor, map, and translate media into clear, actionable insight.</p>
+          </div>
+          <div class="purpose__visual">
+            <!-- Circular waveform placeholder (SVG) -->
+            <svg class="waveform" viewBox="0 0 200 200" aria-hidden="true">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="#2dd8ff" />
+                  <stop offset="1" stop-color="#f9b42e" />
+                </linearGradient>
+              </defs>
+              <circle cx="100" cy="100" r="70" fill="none" stroke="url(#g)" stroke-width="1.8" stroke-opacity="0.9"/>
+              <g class="rings">
+                <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM / HOW WE DECODE -->
+<section id="system" class="section section--system">
+  <div class="container">
+    <h3 class="section__title">How we decode</h3>
+
+    <div class="system__pipeline">
+      <div class="step">
+        <div class="step__icon">📡</div>
+        <h4>Monitor</h4>
+        <p>We capture mentions across news, social, radio, and TV — in real time.</p>
+      </div>
+
+      <div class="pipeline__line"></div>
+
+      <div class="step">
+        <div class="step__icon">🔍</div>
+        <h4>Analyze</h4>
+        <p>We map influence, track sentiment, and detect emerging trends.</p>
+      </div>
+
+      <div class="pipeline__line"></div>
+
+      <div class="step">
+        <div class="step__icon">📊</div>
+        <h4>Report</h4>
+        <p>We deliver clear, actionable insights that inform decisions and shape narratives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- OUR REACH -->
+<!-- OUR REACH -->
+<section id="reach" class="section reach">
+  <div class="reach__overlay">
+    <h2 class="reach__title">Our Reach</h2>
+    <p class="reach__text">
+      Monitoring signals across every region — a living network of awareness.
+    </p>
+  </div>
+  <canvas id="networkCanvas"></canvas>
+</section>
+
+
+
+
+    <!-- CTA -->
+    <section id="cta" class="section section--cta">
+      <div class="container">
+        <h2>See beyond the noise</h2>
+        <p>From the watchtower, we see what others miss. Let’s talk about what that could look like for you.</p>
+        <a href="contact.html" class="btn btn--secondary">Talk to us</a>
+      </div>
+    </section>
+
+    <!-- SIMPLE FOOTER -->
+    <!-- ENHANCED FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Column 1: Brand -->
+    <div class="footer-brand">
+      <h2>Mac Imaana</h2>
+      <p class="footer-tagline">Monitoring. Meaning. Mastery.</p>
+      <p class="footer-desc">
+        We observe the media landscape with precision — decoding every signal, sentiment, and shift that shapes brand reality.
+      </p>
+    </div>
+
+    <!-- Column 2: Navigation -->
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <nav>
+        <a href="#purpose">Why</a>
+        <a href="#system">How</a>
+        <a href="#signals">Signals</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Column 3: Contact + Social -->
+    <div class="footer-contact">
+      <h4>Connect</h4>
+      <p><a href="mailto:info@macimaana.com">info@macimaana.com</a></p>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Mac Imaana. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+  </div>
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>

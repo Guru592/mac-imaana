@@ -1,0 +1,522 @@
+/* Mac Imaana — Services Page: "Signals, Not Sentences" */
+
+:root {
+  --bg-dark: #0b0b0f;
+  --bg-deep: #121826;
+  --text: #f2f4f8;
+  --muted: #9ca3af;
+  --accent: #3b82f6;
+  --alert: #ff3b3b;
+}
+
+body {
+  background: radial-gradient(ellipse at top, var(--bg-deep), var(--bg-dark));
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ------------------------------
+   Intro Section
+------------------------------ */
+.services {
+  padding: 6rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.intro {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.intro.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.intro p {
+  color: var(--muted);
+  margin-bottom: 4rem;
+  font-size: 1.1rem;
+}
+
+
+
+/* ------------------------------
+   Services Grid
+------------------------------ */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.service-card.active {
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+}
+
+.service-card h2 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* ------------------------------
+   Signal Illustrations
+------------------------------ */
+
+/* Radar Sweep */
+.signal.radar {
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.signal.radar::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.6), transparent);
+  transform-origin: left center;
+  animation: sweep 3s linear infinite;
+  border-radius: 0 50% 50% 0;
+}
+
+@keyframes sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ripple */
+.signal.ripple {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.3) 40%, transparent 70%);
+  animation: ripple 3s infinite;
+  margin: 0 auto;
+}
+
+@keyframes ripple {
+  0%, 100% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Alert Pulse */
+.signal.alert {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--alert);
+  box-shadow: 0 0 15px var(--alert);
+  margin: 30px auto;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.5); opacity: 0.3; }
+}
+
+/* Waveform */
+.signal.waveform {
+  width: 100%;
+  height: 40px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(59, 130, 246, 0.5) 0 2px,
+    transparent 2px 6px
+  );
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  animation: wave 1.5s linear infinite;
+  margin: 20px 0;
+}
+
+@keyframes wave {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 30px; }
+}
+
+/* Gridlines */
+.signal.gridlines {
+  width: 80px;
+  height: 80px;
+  background: repeating-linear-gradient(to right, rgba(59,130,246,0.2) 0 1px, transparent 1px 10px),
+              repeating-linear-gradient(to bottom, rgba(59,130,246,0.2) 0 1px, transparent 1px 10px);
+  animation: gridshift 4s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes gridshift {
+  0% { background-position: 0 0; }
+  100% { background-position: 10px 10px; }
+}
+
+/* Prism */
+.signal.prism {
+  width: 70px;
+  height: 70px;
+  background: conic-gradient(from 0deg, #3b82f6, #9333ea, #14b8a6, #3b82f6);
+  border-radius: 12px;
+  animation: prismSpin 5s linear infinite;
+  margin: 0 auto;
+  filter: blur(1px);
+}
+
+@keyframes prismSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* ===== Signal Command Bar ===== */
+/* ===== Signal Command Bar ===== */
+.signal-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  background: rgba(15, 18, 25, 0.45);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 2000;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.signal-nav:hover {
+  background: rgba(18, 21, 29, 0.7);
+  box-shadow: 0 8px 30px rgba(77, 181, 255, 0.1);
+}
+
+/* ===== Left Side ===== */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand:hover {
+  color: var(--accent);
+  text-shadow: 0 0 6px var(--accent);
+}
+
+/* ===== Signal Dot ===== */
+.signal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  animation: pulseDot 3s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.5); opacity: 1; }
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  width: 32px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 3000;
+  transition: transform 0.4s ease;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+
+
+/* Morph when active */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+/* Hover glow */
+.hamburger:hover span {
+  background:  var(--accent);
+  box-shadow: 0 0 8px var(--accent);
+  transition: all 0.25s ease;
+}
+
+/* Optional: slight shrink while active */
+.hamburger.active {
+  transform: scale(0.95);
+}
+
+
+/* ===== Menu Overlay ===== */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 16, 0.93);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== Menu Content ===== */
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8em;
+}
+
+.menu-content a {
+  color: #bfc3c8;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.menu-overlay.active .menu-content a {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.menu-overlay.active .menu-content a:nth-child(1) { animation-delay: 0.15s; }
+.menu-overlay.active .menu-content a:nth-child(2) { animation-delay: 0.3s; }
+.menu-overlay.active .menu-content a:nth-child(3) { animation-delay: 0.45s; }
+.menu-overlay.active .menu-content a:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-content a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  .signal-nav {
+    padding: 0 1.4em;
+    height: 56px;
+  }
+  .brand {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* FOOTER */
+.site-footer {
+  background: #0b0d10;
+  padding: 60px 0 30px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: #ccc;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+}
+
+.footer-brand h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.footer-tagline {
+  color: var(--accent, #64aaff);
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #999;
+  line-height: 1.6;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer-links nav a {
+  display: block;
+  color: #999;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-links nav a:hover {
+  color: var(--accent, #64aaff);
+}
+
+.footer-contact p a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-contact p a:hover {
+  color: var(--accent, #64aaff);
+}
+
+.socials {
+  margin-top: 12px;
+}
+
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #999;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--accent, #64aaff);
+  transform: translateY(-2px);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 13px;
+  color: #777;
+  border-top: 1px solid rgba(255,255,255,0.03);
+  padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-grid {
+    text-align: center;
+  }
+
+  .socials a {
+    margin: 0 6px;
+  }
+}
+
+.trusted-bar {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.trusted-bar p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.signal-line {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  margin: 0 auto;
+  animation: flowline 2.5s linear infinite;
+}
+
+@keyframes flowline {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 120px; }
+}

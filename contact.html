@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Mac Imaana</title>
+
+    <link rel="stylesheet" href="css/contact.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <!-- ===== NAVBAR: The Signal Bar ===== -->
+<nav class="signal-nav">
+  <div class="nav-left">
+    <div class="signal-dot"></div>
+    <a href="index.html" class="brand">Mac Imaana</a>
+  </div>
+  
+</nav>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- ===== Full-Screen Overlay Menu ===== -->
+<div class="menu-overlay" id="menu-overlay">
+  <div class="menu-content">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.macimaanasolution.co.ke/database" target="_blank">Access Portal</a>
+  </div>
+</div>
+
+    <!-- ===== Animated Background Waves ===== -->
+  <div class="signal-bg">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </div>
+
+  <!-- ===== Transmission Zone ===== -->
+  <section class="contact-hero">
+    <div class="content">
+      <h1>The Transmission</h1>
+      <p>Every signal seeks a receiver.<br>If you’ve found us, transmit your message.</p>
+    </div>
+  </section>
+
+  <!-- ===== Contact Form ===== -->
+  <section class="contact-form">
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message..."></textarea>
+      </div>
+
+      <button type="submit" class="transmit-btn">Transmit</button>
+    </form>
+  </section>
+
+ <!-- ENHANCED FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <!-- Column 1: Brand -->
+    <div class="footer-brand">
+      <h2>Mac Imaana</h2>
+      <p class="footer-tagline">Monitoring. Meaning. Mastery.</p>
+      <p class="footer-desc">
+        We observe the media landscape with precision — decoding every signal, sentiment, and shift that shapes brand reality.
+      </p>
+    </div>
+
+    <!-- Column 2: Navigation -->
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <nav>
+        <a href="#purpose">Why</a>
+        <a href="#system">How</a>
+        <a href="#signals">Signals</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Column 3: Contact + Social -->
+    <div class="footer-contact">
+      <h4>Connect</h4>
+      <p><a href="mailto:info@macimaana.com">info@macimaana.com</a></p>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Mac Imaana. All rights reserved.</p>
+  </div>
+</footer>
+    <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="js/navbar.js"></script>
+</body>
+</html>
