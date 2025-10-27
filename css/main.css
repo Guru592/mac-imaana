@@ -674,6 +674,19 @@ body{
     height: 160px;
   }
 
+    .purpose__text h2 {
+    margin-bottom: 4px; /* smaller spacing below heading */
+  }
+
+  .purpose__text p {
+    margin-bottom: 0; /* remove paragraph margin stacking */
+  }
+
+  .purpose__inner {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
 
   /* System section */
   .system__pipeline {
