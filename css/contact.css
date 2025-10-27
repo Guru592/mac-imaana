@@ -665,3 +665,10 @@ body {
     backface-visibility: hidden;
   }
 }
+/* === Stop page from moving when menu or nav is active === */
+body.menu-open {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  touch-action: none;
+}
