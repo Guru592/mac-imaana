@@ -6,7 +6,8 @@
     <title>About — Mac Imaana</title>
 
     <link rel="stylesheet" href="css/about.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <!-- Google Font (replace if you prefer) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 <body>
@@ -77,6 +78,36 @@
     </div>
   </section>
 
+    <!-- ===== Media Reach Stats ===== -->
+  <section class="about-stats">
+    <div class="stats-inner">
+      <h2>Media Reach</h2>
+      <p>Tracking visibility across every channel</p>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3><span class="counter" data-target="480">0</span>+</h3>
+          <p>Print Stories</p>
+        </div>
+
+        <div class="stat-item">
+          <h3><span class="counter" data-target="1200">0</span>+</h3>
+          <p>Radio Mentions</p>
+        </div>
+
+        <div class="stat-item">
+          <h3><span class="counter" data-target="850">0</span>+</h3>
+          <p>TV Segments</p>
+        </div>
+
+        <div class="stat-item">
+          <h3><span class="counter" data-target="2000">0</span>+</h3>
+          <p>Online Mentions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== The Ethos ===== -->
   <section class="values-grid">
     <div class="value-card">
@@ -120,7 +151,9 @@
     <!-- Column 3: Contact + Social -->
     <div class="footer-contact">
       <h4>Connect</h4>
-      <p><a href="mailto:info@macimaana.com">info@macimaana.com</a></p>
+      <p><a href="mailto:info@macimaana.com">info@macimaana.co.ke</a></p>    
+      
+  
       <div class="socials">
         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
@@ -134,9 +167,11 @@
     <p>© <span id="year"></span> Mac Imaana. All rights reserved.</p>
   </div>
 </footer>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
   <script src="js/navbar.js"></script>
+  <script src="js/counter.js"></script>
 </body>
 </html>

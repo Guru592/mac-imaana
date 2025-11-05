@@ -434,6 +434,61 @@ body {
   }
 }
 
+/* ===== Media Reach Stats ===== */
+.about-stats {
+  padding: 8em 2em;
+  text-align: center;
+  background: rgba(255,255,255,0.01);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.about-stats h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.3em;
+}
+
+.about-stats p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 2.5em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5em;
+  justify-items: center;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.4rem;
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  text-shadow: 0 0 10px rgba(51,177,255,0.25);
+}
+
+.stat-item p {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-stats {
+    padding: 5em 1.5em;
+  }
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+}
+
 
 
 /* FOOTER */
