@@ -716,6 +716,11 @@ body{
   transform: scale(1.05);
 }
 
+/* Mobile auto-scroll marquee */
+.logo-marquee {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .logo-grid {
     grid-template-columns: repeat(3, 1fr); /* ✅ 3 per row on tablets */
@@ -724,24 +729,34 @@ body{
 
 @media (max-width: 600px) {
   .logo-grid {
-    grid-template-columns: repeat(2, 1fr); /* ✅ 2 per row on mobile */
-    gap: 1.2rem;
+    display: none; /* hide grid */
   }
-  .logo {
-    height: 90px;
-    padding: 12px;
-  }
-  .logo img {
-    height: 50px;
-    max-width: 100px;
-    object-fit: contain;
 
+  .logo-marquee {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
   }
-}
 
-@media (max-width: 480px) {
+  .logo-track {
+    display: flex;
+    width: 200%;
+    animation: scroll 25s linear infinite;
+  }
+
   .logo {
-    animation: none; /* ✅ disables float animation to save CPU on very small screens */
+    flex: 0 0 auto;
+    padding: 15px 25px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
 }
 
