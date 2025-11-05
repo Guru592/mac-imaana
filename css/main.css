@@ -718,29 +718,35 @@ body{
 
 @media (max-width: 900px) {
   .logo-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 per row on tablets */
   }
 }
 
 @media (max-width: 600px) {
   .logo-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 per row on mobile */
+    gap: 1.2rem;
   }
   .logo {
-    height: 100px;
-    padding: 15px;
+    height: 90px;
+    padding: 12px;
   }
   .logo img {
-    max-height: 60px;
+    height: 50px;
+    max-width: 100px;
+    object-fit: contain;
+
   }
 }
 
 @media (max-width: 480px) {
   .logo {
-    animation: none;
+    animation: none; /* ✅ disables float animation to save CPU on very small screens */
   }
 }
+
+
+
 
 /* -------------------------
    MOBILE OPTIMIZATION
