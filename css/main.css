@@ -716,7 +716,31 @@ body{
   transform: scale(1.05);
 }
 
+@media (max-width: 900px) {
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on tablets */
+  }
+}
 
+@media (max-width: 600px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
+    gap: 1.5rem;
+  }
+  .logo {
+    height: 100px;
+    padding: 15px;
+  }
+  .logo img {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    animation: none;
+  }
+}
 
 /* -------------------------
    MOBILE OPTIMIZATION
