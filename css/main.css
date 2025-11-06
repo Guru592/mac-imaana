@@ -727,38 +727,58 @@ body{
   }
 }
 
+/* ============================
+   MOBILE LOGO MARQUEE FIX
+   ============================ */
 @media (max-width: 600px) {
+  /* Hide desktop grid */
   .logo-grid {
-    display: none; /* hide grid */
+    display: none;
   }
 
+  /* Show marquee */
   .logo-marquee {
     display: block;
     overflow: hidden;
     position: relative;
     width: 100%;
+    margin-top: 1.5em;
   }
 
   .logo-track {
     display: flex;
-    width: 200%;
-    animation: scroll 25s linear infinite;
+    align-items: center;
+    gap: 40px; /* spacing between logos */
+    animation: scrollMarquee 20s linear infinite;
+    width: max-content;
+    padding: 10px 0;
   }
 
-  .logo {
+  .logo-marquee .logo {
     flex: 0 0 auto;
-    padding: 15px 25px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px; /* ensures even spacing */
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
   }
 
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  .logo-marquee .logo img {
+    max-height: 60px;
+    width: auto;
+    opacity: 0.9;
+  }
+
+  @keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 }
+
 
 
 
